@@ -26,7 +26,7 @@
 }
 
 .fa-solid {
-    font-size: 25px;
+    font-size: 18px;
 }
 
 .btnTab {
@@ -77,6 +77,14 @@
     font-weight: bold;
 }
 
+#selec {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: none;
+    background-repeat: no-repeat;
+}
+
 #selec:hover {
     border-radius: 15px;
     transform: scale(0.95);
@@ -102,7 +110,7 @@
 #findSection {
     display: flex;
     position: relative;
-    left: 50px;
+    left: 55px;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
@@ -131,13 +139,8 @@ footer {
     height: 200px;
 }
 
-/*
+/* ------------------------------ ТЕМНА ТЕМА ------------------------------ */
 
----------------------------------- ТЕМНА ТЕМА ----------------------------------------
-
-*/
-
-/* Темна тема */
 .dark-mode {
     background-color: #121212;
     color: white;
@@ -147,29 +150,42 @@ footer {
 .dark-mode #findSection input {
     background-color: #1e1e1e;
     color: white;
+    box-shadow: none;
+}
+
+/* Інпут при focus — ЧОРНА тінь */
+.dark-mode #findSection input:focus {
+    box-shadow: 0px 3px 8px 0px black !important;
 }
 
 /* Кнопки */
 .dark-mode .btn {
     background-color: #2a2a2a;
     color: white;
-    box-shadow: none;
+    box-shadow: none !important;
 }
 
+/* Кнопки при hover — ЧОРНА тінь */
 .dark-mode .btn:hover {
-    box-shadow: 0px 2px 5px 0px rgb(180, 180, 180);
-}
-
-/* Верхня панель */
-.dark-mode #topButtonsPanel {
-    background-color: #1e1e1e;
-    box-shadow: 0px 3px 5px 0px #333;
+    box-shadow: 0px 2px 6px 0px black !important;
 }
 
 /* Селект */
 .dark-mode #selec {
     background-color: #2a2a2a;
     color: white;
+    box-shadow: none !important;
+}
+
+/* Селект при hover */
+.dark-mode #selec:hover {
+    box-shadow: 0px 2px 6px 0px black !important;
+}
+
+/* Верхня панель */
+.dark-mode #topButtonsPanel {
+    background-color: #1e1e1e;
+    box-shadow: 0px 3px 6px 0px black !important;
 }
 
 /* Модальне вікно */
@@ -182,6 +198,7 @@ footer {
 .dark-mode footer {
     background-color: #000;
 }
+
 
 /* Сірий фон */
 #modalBackdrop {
