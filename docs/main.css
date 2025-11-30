@@ -61,7 +61,10 @@
     pointer-events: none;
 }
 
-
+#findBtn {
+    position: relative;
+    right: 107px;
+}
 
 #selec {
     background-color: white;
@@ -72,6 +75,14 @@
     text-transform: uppercase;
     font-size: 15px;
     font-weight: bold;
+}
+
+#selec:hover {
+    border-radius: 15px;
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px 0px gray;
+    border: none;
+    cursor: pointer;
 }
 
 #disclaimer {
@@ -90,10 +101,12 @@
 
 #findSection {
     display: flex;
+    position: relative;
+    left: 50px;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    width: 900px;
+    width: 700px;
 }
 
 #findSection input{
@@ -118,8 +131,57 @@ footer {
     height: 200px;
 }
 
+/*
 
+---------------------------------- ТЕМНА ТЕМА ----------------------------------------
 
+*/
+
+/* Темна тема */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+/* Інпут */
+.dark-mode #findSection input {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+/* Кнопки */
+.dark-mode .btn {
+    background-color: #2a2a2a;
+    color: white;
+    box-shadow: none;
+}
+
+.dark-mode .btn:hover {
+    box-shadow: 0px 2px 5px 0px rgb(180, 180, 180);
+}
+
+/* Верхня панель */
+.dark-mode #topButtonsPanel {
+    background-color: #1e1e1e;
+    box-shadow: 0px 3px 5px 0px #333;
+}
+
+/* Селект */
+.dark-mode #selec {
+    background-color: #2a2a2a;
+    color: white;
+}
+
+/* Модальне вікно */
+.dark-mode #modalWindow {
+    background: #1e1e1e;
+    color: white;
+}
+
+/* Футер */
+.dark-mode footer {
+    background-color: #000;
+}
 
 /* Сірий фон */
 #modalBackdrop {

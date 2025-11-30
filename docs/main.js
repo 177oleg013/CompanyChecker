@@ -34,3 +34,7 @@ modalBackdrop.addEventListener("click", (e) => {
         modalBackdrop.style.display = "none";
     }
 });
+
+themeChangerButton.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+});
