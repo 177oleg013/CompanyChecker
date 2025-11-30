@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
     <link rel="stylesheet" href="../src/css/main.css">
     <title>Company Checker</title>
 </head>
@@ -10,18 +11,20 @@
     <div id="mainWrapper">
         <header>
             <div id="topButtonsPanel">
-                <div>
+                <div class="btnTab">
                     <button class="btn">History</button>
                     <button class="btn">Premium</button>
+                    <button class="btn" id="howToUseButton">How to use?</button>
                 </div>
                 <h1>company checker</h1>
-                <div>
-                    <button class="btn">Sun</button>
+                <div class="btnTab">
+                    <button class="btn" id="themeChangerButton"><i class="fa-solid fa-sun"></i></button>
                     <select name="" id="selec">
                         <option value="" selected>English</option>
                         <option value="">Ukrainian</option>
                         <option value="">Russian</option>
                     </select>
+                    <button class="btn"><i class="fa-solid fa-circle-user"></i></button>
                 </div>
             </div>
 
@@ -37,16 +40,53 @@
 
         <main>
             <div id="findSection">
-                <input type="text" placeholder="Enter URL here...">
+                <input type="text" placeholder="Enter company's name here...">
                 <button class="btn">Find</button>
             </div>
         </main>
 
         <footer>
-            <div>
 
-            </div>
         </footer>
     </div> 
+
+        <!-- MODAL BACKDROP -->
+    <div id="modalBackdrop">
+        <div id="modalWindow">
+            <button id="closeModal">&times;</button>
+            <p id="modalText">How to Use This Service
+
+                                This tool allows you to quickly gather essential information about any company.
+                                Simply enter the company’s name in the search field, and the system will automatically collect data from publicly available sources.
+
+                                The service may provide:
+
+                                - General company information
+
+                                - Reviews from multiple platforms
+
+                                - Reputation details
+
+                                - Legal issues or court records (if available)
+
+                                - Reported problems or risks
+
+                                - Positive aspects and strengths
+
+                                - Other relevant publicly accessible data
+
+                                How to use the search:
+
+                                - Type the company’s name into the input field.
+
+                                - Click the Find button.
+
+                                Wait a moment while the system analyzes and gathers information.
+
+                                The service will then display all the collected data in one place, allowing you to evaluate the company quickly and easily.</p>
+        </div>
+    </div>
+
+    <script src="../src/js/ui/main.js"></script>
 </body>
 </html>

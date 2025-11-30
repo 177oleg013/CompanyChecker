@@ -3,14 +3,14 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    transition: 0.4s all;
+    transition: 0.5s all;
 }
 
 .btn {
     background-color: white;
     border: none;
     padding: 10px 30px;
-    margin: 0 10px;
+    margin: 0 5px;
     border-radius: 7px;
     text-transform: uppercase;
     font-size: 15px;
@@ -25,22 +25,43 @@
     cursor: pointer;
 }
 
+.fa-solid {
+    font-size: 25px;
+}
+
+.btnTab {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 #topButtonsPanel {
     display: flex;
     height: 100px;
     width: 95%;
     margin: 30px auto;
-    padding: 0 100px;
+    padding: 0 50px;
     align-items: center;
     justify-content: space-between;
     border-radius: 60px;
     box-shadow: 0px 3px 5px 0px gray;
 }
 
-#topButtonsPanel h1 {
-    text-transform: uppercase;
-    
+#topButtonsPanel {
+    position: relative;
 }
+
+#topButtonsPanel h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+
 
 #selec {
     background-color: white;
@@ -81,6 +102,8 @@
     border-radius: 5px;
     border: none;
     outline: none;
+    padding: 0 20px;
+    font-size: 15px;
 }
 
 #findSection input:focus{
@@ -88,9 +111,57 @@
     box-shadow: 0px 3px 5px 0px gray;
 }
 
-footer div {
+footer {
     background-color: black;
     margin-top: 182px;
     width: 100%;
     height: 200px;
+}
+
+
+
+
+/* Сірий фон */
+#modalBackdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none; /* приховано */
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Вікно */
+#modalWindow {
+    background: white;
+    width: 500px;
+    max-width: 90%;
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    animation: pop 0.2s ease;
+}
+
+/* Анімація */
+@keyframes pop {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Закрити */
+#closeModal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
 }
