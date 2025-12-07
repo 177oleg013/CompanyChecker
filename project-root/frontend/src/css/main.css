@@ -32,19 +32,40 @@
 .btnTab {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 10px;
 }
 
 #topButtonsPanel {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 100px;
     width: 95%;
     margin: 30px auto;
     padding: 0 50px;
-    align-items: center;
-    justify-content: space-between;
     border-radius: 60px;
     box-shadow: 0px 3px 5px 0px gray;
+}
+
+.panelSide {
+    width: 33%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.panelCenter {
+    display: flex;
+    align-items: center;
+    width: 33%;
+    text-align: center;
+}
+
+.panelCenter h1 {
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 #topButtonsPanel {
@@ -142,13 +163,13 @@ footer {
 /* ------------------------------ ТЕМНА ТЕМА ------------------------------ */
 
 .dark-mode {
-    background-color: #121212;
+    background-color: #131313;
     color: white;
 }
 
 /* Інпут */
 .dark-mode #findSection input {
-    background-color: #1e1e1e;
+    background-color: #131313;
     color: white;
     box-shadow: none;
 }
@@ -160,7 +181,7 @@ footer {
 
 /* Кнопки */
 .dark-mode .btn {
-    background-color: #2a2a2a;
+    background-color: #1e1e1e;
     color: white;
     box-shadow: none !important;
 }
@@ -172,7 +193,7 @@ footer {
 
 /* Селект */
 .dark-mode #selec {
-    background-color: #2a2a2a;
+    background-color: #1e1e1e;
     color: white;
     box-shadow: none !important;
 }
@@ -194,10 +215,17 @@ footer {
     color: white;
 }
 
+.dark-mode #findBtn {
+    background: #131313;
+    color: white;
+}
+
 /* Футер */
 .dark-mode footer {
     background-color: #000;
 }
+
+/*---------------------------------------------------------------*/
 
 
 /* Сірий фон */
